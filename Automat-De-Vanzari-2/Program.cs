@@ -11,8 +11,8 @@ namespace Automat_De_Vanzari_2
         static bool menuiesire() // un simplu menu de iesire sau intrare in program
         {
             string raspuns;
-            Console.WriteLine("0-Exit program /0 1-Enter program");
-            Console.WriteLine(">>> ");
+            Console.WriteLine("0-Exit program \n1-Enter program\n");
+            Console.Write(">>> ");
             raspuns=Console.ReadLine();
             if (raspuns == "1")
                 return true;
@@ -27,8 +27,8 @@ namespace Automat_De_Vanzari_2
         static string inserare_monede() //returneaza tipul de moneda care este inserat de user
         {
             string raspuns;
-            Console.WriteLine("Please insert a coin. /0 0-Nickel /0 1-Dime /0 2-Quarter");
-            Console.WriteLine(">>> ");
+            Console.WriteLine("Please insert a coin. \n0-Nickel \n1-Dime \n2-Quarter\n");
+            Console.Write(">>> ");
             raspuns=Console.ReadLine();
             if(raspuns != "0") //verifica daca nu a introdus nicio moneda corecta
                 if(raspuns!="1")
@@ -120,6 +120,7 @@ namespace Automat_De_Vanzari_2
         {
             if (menuiesire() == true)
                 stare("a", "000");
+            Console.WriteLine("Exiting program. ");
             Console.ReadLine();
         }
     }
